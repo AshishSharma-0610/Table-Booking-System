@@ -27,7 +27,7 @@ export default function BookingForm() {
 
     const fetchBookings = async () => {
         try {
-            const response = await axios.get('http://localhost:3000/api/bookings');
+            const response = await axios.get('https://table-booking-system-9x7c.onrender.com/api/bookings');
             setBookedSlots(response.data);
         } catch (error) {
             console.error('Error fetching bookings:', error);
@@ -60,7 +60,7 @@ export default function BookingForm() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:3000/api/bookings', formData);
+            const response = await axios.post('https://table-booking-system-9x7c.onrender.com/api/bookings', formData);
             setMessage('Booking confirmed!');
             setMessageType('success');
             setShowSummary(true);
